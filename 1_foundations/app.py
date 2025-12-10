@@ -141,18 +141,20 @@ class Me:
             """
 
     def chat(self, message, history):
-        messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
-        done = False
-        while not done:
-            response = self.openai.chat.completions.create(model="gpt-4o-mini", messages=messages, tools=tools)
-            if response.choices[0].finish_reason=="tool_calls":
-                message = response.choices[0].message
-                tool_calls = message.tool_calls
-                results = self.handle_tool_call(tool_calls)
-                messages.append(message)
-                messages.extend(results)
-            else:
-                done = True
+        """Handle a chat message from the user."""
+        messages = [{"role": "system", "content": self.system_prompt()}]
+        messages.extend(history)
+        messages.append({"role": "user", "content": message})
+        while True:  # Loop to handle tool calls until no more are needed.
+            response = self.openai.chat.completions.create(
+                model="gpt-4o-mini", messages=messages, tools=tools)
+            # Check if the response includes tool calls.
+            if response.choices[0].finish_reason != "tool_calls":
+                break
+            message = response.choices[0].message
+            results = self.handle_tool_call(message.tool_calls)
+            messages.append(message)
+            messages.extend(results)
         return response.choices[0].message.content
 
 
