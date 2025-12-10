@@ -84,17 +84,18 @@ tools = [{"type": "function", "function": record_user_details_json},
 
 
 class Me:
-
-    def __init__(self):
+    """Class representing myself for the chatbot."""
+    def __init__(self, name, cv_pdf_path, summary_path):
+        """Initialize the Me class by loading LinkedIn profile and summary."""
         self.openai = OpenAI()
-        self.name = "Ed Donner"
-        reader = PdfReader("me/linkedin.pdf")
+        self.name = name
+        reader = PdfReader(cv_pdf_path)
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
-        with open("me/summary.txt", "r", encoding="utf-8") as f:
+        with open(summary_path, "r", encoding="utf-8") as f:
             self.summary = f.read()
 
 
@@ -136,9 +137,11 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             else:
                 done = True
         return response.choices[0].message.content
-    
+
 
 if __name__ == "__main__":
-    me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
-    
+    name = "Carlos Bazaga"
+    cv_pdf = "me/linkedinCB.pdf"
+    summary_txt = "me/summaryCB.txt"
+    gr.ChatInterface(Me(name, cv_pdf, summary_txt).chat,
+                     type="messages", title="Carlos Bazaga's virtual CV").launch()
