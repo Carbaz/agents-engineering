@@ -1,3 +1,5 @@
+"""Interactive AI Resume and CV chatbot.."""
+
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
@@ -9,28 +11,32 @@ import gradio as gr
 
 load_dotenv(override=True)
 
+
 def push(text):
-    requests.post(
-        "https://api.pushover.net/1/messages.json",
-        data={
-            "token": os.getenv("PUSHOVER_TOKEN"),
-            "user": os.getenv("PUSHOVER_USER"),
-            "message": text,
-        }
-    )
+    """Send a push notification using Pushover."""
+    requests.post("https://api.pushover.net/1/messages.json",
+                  data={"token": os.getenv("PUSHOVER_TOKEN"),
+                        "user": os.getenv("PUSHOVER_USER"),
+                        "message": text})
 
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
+    """Record user details via a push notification."""
     push(f"Recording {name} with email {email} and notes {notes}")
     return {"recorded": "ok"}
 
+
 def record_unknown_question(question):
+    """Record an unknown question via a push notification."""
     push(f"Recording {question}")
     return {"recorded": "ok"}
 
+
+# Define tool JSON schema for the "record_user_details" tool.
 record_user_details_json = {
     "name": "record_user_details",
-    "description": "Use this tool to record that a user is interested in being in touch and provided an email address",
+    "description": "Use this tool to record that a user is interested in being"
+                   " in touch and provided an email address",
     "parameters": {
         "type": "object",
         "properties": {
@@ -45,7 +51,8 @@ record_user_details_json = {
             ,
             "notes": {
                 "type": "string",
-                "description": "Any additional information about the conversation that's worth recording to give context"
+                "description": "Any additional information about the conversation"
+                " that's worth recording to give context"
             }
         },
         "required": ["email"],
@@ -53,9 +60,11 @@ record_user_details_json = {
     }
 }
 
+# Define tool JSON schema for the "record_unknown_question" tool.
 record_unknown_question_json = {
     "name": "record_unknown_question",
-    "description": "Always use this tool to record any question that couldn't be answered as you didn't know the answer",
+    "description": "Always use this tool to record any question that couldn't be"
+                   " answered as you didn't know the answer",
     "parameters": {
         "type": "object",
         "properties": {
@@ -69,6 +78,7 @@ record_unknown_question_json = {
     }
 }
 
+# List of available tools.
 tools = [{"type": "function", "function": record_user_details_json},
         {"type": "function", "function": record_unknown_question_json}]
 
