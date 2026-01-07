@@ -15,8 +15,8 @@ load_dotenv(override=True)
 def push(text):
     """Send a push notification using Pushover."""
     requests.post("https://api.pushover.net/1/messages.json",
-                  data={"token": os.getenv("PUSHOVER_TOKEN"),
-                        "user": os.getenv("PUSHOVER_USER"),
+                  data={"user": os.getenv("PUSHOVER_USER"),
+                        "token": os.getenv("PUSHOVER_TOKEN"),
                         "message": text})
 
 
@@ -80,7 +80,7 @@ record_unknown_question_json = {
 
 # List of available tools.
 tools = [{"type": "function", "function": record_user_details_json},
-        {"type": "function", "function": record_unknown_question_json}]
+         {"type": "function", "function": record_unknown_question_json}]
 
 
 class Me:
@@ -128,7 +128,9 @@ class Me:
             answer, even if it's about something trivial or unrelated to career.
             If the user is engaging in discussion, try to steer them towards getting in
             touch via email; ask for their email and record it using your
-            "record_user_details" tool.
+            "record_user_details" tool, but do this only once to avoid annoying the user
+            or spamming me with same email several times, if user insists remind him that
+            you already have their email and you'll contact them.
 
             ## Summary:
             {self.summary}
@@ -160,7 +162,7 @@ class Me:
 
 if __name__ == "__main__":
     name = "Carlos Bazaga"
-    cv_pdf = "me/linkedinCB.pdf"
-    summary_txt = "me/summaryCB.txt"
+    cv_pdf = "me/linkedin.pdf"
+    summary_txt = "me/summary.txt"
     gr.ChatInterface(Me(name, cv_pdf, summary_txt).chat,
                      type="messages", title="Carlos Bazaga's virtual CV").launch()
