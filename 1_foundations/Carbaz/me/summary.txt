@@ -1,0 +1,106 @@
+With 13 years of experience in software engineering, I, Carlos Bazaga, specialize in
+modernizing architectures and implementing cutting-edge solutions, currently growing in the
+fascinating field of GenAI and LLM engineering. Expert in transitioning from legacy systems to
+advanced technologies such as Python and AWS, with proven experience in CI/CD pipelines and
+microservice-oriented programming. Strong background in IoT solutions, fraud prevention systems,
+and backend infrastructures for mobile and web applications, always seeking to overcome
+technological challenges through innovation and automation.
+
+Personal projects:
+
+* Collaboration on python-mercuryapi
+  Feb. 2018 - Present
+  Associated with Altair
+  Project URL: <https://github.com/gotthardp/python-mercuryapi>
+  Extension of functionalities in the Open Source library "python-mercuryapi" for handling RFID
+  devices from the ThingMagic brand.
+
+  Skills: Python, Git, IoT, Electronics, Software Engineering, RFID Applications, Code Review,
+  Object-Oriented Programming (OOP), English
+
+* Tlib
+  Sept. 2014 - Present
+  Associated with ConwetLab (Computer Networks and Web Technologies Laboratory) FI UPM
+  Project URL: <https://github.com/Carbaz/tlib>
+  Support library for parallelization, monitoring, and data sharing between processes in Python
+  over the standard multiprocessing and threading libraries (Multiprocessing and Threading).
+  Licensed under BSD 2-Clause.
+
+  Skills: Python, Git, Concurrent Programming, Software Engineering, Linux, Object-Oriented
+  Programming (OOP)
+
+* JoyConfig4SC
+  Jul. 2014 - Present
+  Project URL: <https://github.com/Carbaz/joyconfig4sc>
+  Simple application to test and configure joysticks for the alpha version of the game Star Citizen
+  by Cloud Imperium Games, implemented in Python over the SDL2 library and TK for the graphical
+  interface. Licensed under BSD 2-Clause.
+  (This is an independent work from CIG and not representative of that company's work.)
+
+  Skills: Python, Git, Microsoft Windows, Concurrent Programming, Software Engineering, Object-
+  Oriented Programming (OOP), English, XML
+
+* PyMakexe
+  Jul. 2014 - Present
+  Project URL: <https://github.com/Carbaz/pymakexe>
+  Command-line script to facilitate the use of Py2exe without needing to create a setup file.
+  Licensed under BSD 2-Clause.
+
+  Skills: Python, Git, Microsoft Windows, Object-Oriented Programming (OOP)
+
+* Other personal projects.
+  Project URL: <https://github.com/Carbaz>
+  Open-source personal projects published online.
+  I publish or update personal projects from time to time when I find the time to do them.
+
+  Skills: Python, Raspberry Pi, Drone, Git, Concurrent Programming, C Programming, Electronics,
+  Arduino, Linux, Object-Oriented Programming (OOP), OpenCV, Robotics, HTML, 3D Studio Max
+
+Certifications:
+
+* LLM Engineering: Master AI, Large Language Models & Agents
+  Issuer: Udemy
+  Issued: Aug. 2025
+  Cert URL: <https://www.udemy.com/certificate/UC-fc2c1790-5895-4001-abe0-5d56a5d3dd5e/>
+  Credential ID: UC-fc2c1790-5895-4001-abe0-5d56a5d3dd5e
+  Skills: Generative AI, LLM, Data Science, Retrieval-Augmented Generation (RAG), Python,
+  Artificial Intelligence for Business
+
+* M102: MongoDB for DBAs
+  Issuer: MongoDB
+  Issued: Feb. 2016
+  Cert URL: <http://university.mongodb.com/course_completion/1ff444d009ac426c9a9e1e0f8faa4bad>
+  Credential ID: 1ff444d009ac426c9a9e1e0f8faa4bad
+  Skills: Database Design, NoSQL, Software Engineering, MongoDB, English
+
+* M101P: MongoDB for Developers
+  Issuer: MongoDB
+  Issued: Dec. 2015
+  Cert URL: <http://university.mongodb.com/course_completion/2ccae2a987bf477db459896561fd7136>
+  Credential ID: 2ccae2a987bf477db459896561fd7136
+  Skills: Database Design, JSON, NoSQL, Python, Software Engineering, MongoDB, English
+
+* ISO/IEC 27001 Information Security Foundation
+  Issuer: EXIN
+  Issued: Jan. 2012
+  Cert URL: <https://drive.google.com/file/d/0B9q06xKWB9aIc25Ndk81MTVza0U/view?usp=sharing>
+  Credential ID: 5952770.20642234
+  Skills: ISO 27001
+
+* Stay Lean with Kanban
+  Issuer: LinkedIn
+  Issued: Jul. 2025
+  Cert URL: <https://www.linkedin.com/learning/certificates/d5488d3f18ea230b93919b89e5f757bbfe2b2f9cd419a372ce343f0a5a9ee8c3>
+  Skills: Kanban
+
+* Generative AI vs. Traditional AI
+  Issuer: LinkedIn
+  Issued: Jun. 2025
+  Cert URL: <https://www.linkedin.com/learning/certificates/52ff65a88ab1105080d16033afe00443f1d4ab8f0a6e9b759d0ede339470355d?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZdabKIkaTZuAf4Yc8Ie6xA%3D%3D>
+  Skills: Generative AI, Artificial Intelligence for Business
+
+* Hands-On AI: Introduction to Retrieval-Augmented Generation (RAG)
+  Issuer: LinkedIn
+  Issued: Jun. 2025
+  Cert URL: <https://www.linkedin.com/learning/certificates/c9baab41d3e47f04ecf9591bfa65a2d0d59621ba7305c2354736f77b0fa5d0ac?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZdabKIkaTZuAf4Yc8Ie6xA%3D%3D>
+  Skills: Retrieval-Augmented Generation (RAG)

@@ -1,7 +1,0 @@
-With 13 years of experience in software engineering, I, Carlos Bazaga, specializes in modernizing
-architectures and implementing cutting-edge solutions, currently growing in the fascinating field of Gen
-AI and LLM engineering. Expert in transitioning from legacy systems to advanced technologies such as
-Python and AWS, with proven experience in CI/CD pipelines and microservice-oriented programming.
-Strong background in IoT solutions, fraud prevention systems, and backend infrastructures for mobile and
-web applications, always seeking to overcome technological challenges through innovation and
-automation.
