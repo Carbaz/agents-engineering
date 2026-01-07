@@ -96,11 +96,11 @@ Certifications:
 * Generative AI vs. Traditional AI
   Issuer: LinkedIn
   Issued: Jun. 2025
-  Cert URL: <https://www.linkedin.com/learning/certificates/52ff65a88ab1105080d16033afe00443f1d4ab8f0a6e9b759d0ede339470355d?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZdabKIkaTZuAf4Yc8Ie6xA%3D%3D>
+  Cert URL: <https://www.linkedin.com/learning/certificates/52ff65a88ab1105080d16033afe00443f1d4ab8f0a6e9b759d0ede339470355d>
   Skills: Generative AI, Artificial Intelligence for Business
 
 * Hands-On AI: Introduction to Retrieval-Augmented Generation (RAG)
   Issuer: LinkedIn
   Issued: Jun. 2025
-  Cert URL: <https://www.linkedin.com/learning/certificates/c9baab41d3e47f04ecf9591bfa65a2d0d59621ba7305c2354736f77b0fa5d0ac?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZdabKIkaTZuAf4Yc8Ie6xA%3D%3D>
+  Cert URL: <https://www.linkedin.com/learning/certificates/c9baab41d3e47f04ecf9591bfa65a2d0d59621ba7305c2354736f77b0fa5d0ac>
   Skills: Retrieval-Augmented Generation (RAG)
