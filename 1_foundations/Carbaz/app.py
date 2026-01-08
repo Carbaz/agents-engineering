@@ -1,12 +1,13 @@
 """Interactive AI Resume and CV chatbot.."""
 
-from dotenv import load_dotenv
-from openai import OpenAI
 import json
 import os
-import requests
+
+from dotenv import load_dotenv
+from gradio import ChatInterface
+from openai import OpenAI
 from pypdf import PdfReader
-import gradio as gr
+from requests import post
 
 
 load_dotenv(override=True)
@@ -14,10 +15,10 @@ load_dotenv(override=True)
 
 def push(text):
     """Send a push notification using Pushover."""
-    requests.post("https://api.pushover.net/1/messages.json",
-                  data={"user": os.getenv("PUSHOVER_USER"),
-                        "token": os.getenv("PUSHOVER_TOKEN"),
-                        "message": text})
+    post("https://api.pushover.net/1/messages.json",
+         data={"user": os.getenv("PUSHOVER_USER"),
+               "token": os.getenv("PUSHOVER_TOKEN"),
+               "message": text})
 
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
@@ -164,5 +165,5 @@ if __name__ == "__main__":
     name = "Carlos Bazaga"
     cv_pdf = "me/linkedin.pdf"
     summary_txt = "me/summary.txt"
-    gr.ChatInterface(Me(name, cv_pdf, summary_txt).chat,
-                     type="messages", title="Carlos Bazaga's virtual CV").launch()
+    ChatInterface(Me(name, cv_pdf, summary_txt).chat,
+                  type="messages", title="Carlos Bazaga's virtual CV").launch()
