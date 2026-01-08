@@ -1,11 +1,11 @@
 ---
-title: cv_conv_test
+title: career_conversation
 app_file: app.py
 sdk: gradio
-sdk_version: 5.34.2
+sdk_version: 5.49.1
 license: mit
 emoji: 📚
 colorFrom: green
 colorTo: blue
-short_description: My CV digital twin
+short_description: Carlos Bazaga's virtual CV
 ---
