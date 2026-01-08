@@ -1,9 +1,11 @@
 ---
 title: cv_conv_test
-emoji: 🕴️
-colorFrom: green
-colorTo: blue
 app_file: app.py
 sdk: gradio
-sdk_version: 6.2.0
+sdk_version: 5.34.2
+license: mit
+emoji: 📚
+colorFrom: green
+colorTo: blue
+short_description: My CV digital twin
 ---
