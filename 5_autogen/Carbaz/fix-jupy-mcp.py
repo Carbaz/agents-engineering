@@ -1,9 +1,5 @@
 """Windows + Jupyter fix for MCP server creation."""
 
-# Extra imports to make this and next cells work standalone
-from IPython.display import display, Markdown
-from dotenv import load_dotenv
-
 # Jupyter on Windows has an issue with MCP stdio client due to how Jupyter captures
 # "stderr".
 #   See: https://github.com/modelcontextprotocol/python-sdk/issues/1103
@@ -19,9 +15,11 @@ from dotenv import load_dotenv
 
 # We are not directly calling the "stdio_client" so we need to "monkey patch" it
 # to pass "None" for "stderr" always.
-import mcp
-mcp.client.stdio._original_stdio_client = mcp.client.stdio.stdio_client
-patched = lambda server, *_: mcp.client.stdio._original_stdio_client(server, None)  # noqa: E731
-mcp.stdio_client = mcp.client.stdio.stdio_client = patched
 
-load_dotenv(override=True)
+import mcp
+
+
+_errlog = open("mcp_stderr.log", "w", buffering=1)
+mcp.client.stdio._original_stdio_client = mcp.client.stdio.stdio_client
+patched = lambda server, *_: mcp.client.stdio._original_stdio_client(server, _errlog)  # noqa: E731
+mcp.stdio_client = mcp.client.stdio.stdio_client = patched
